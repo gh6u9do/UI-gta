@@ -1,7 +1,13 @@
-function App () {
-    return (
-        <center>This is app</center>
-    )
+
+import StatusBar from "./components/StatusBar/StatusBar";
+
+function App() {
+  return (
+    <div>
+      <StatusBar />
+    </div>
+  );
 }
 
-export default App
+export default App;
+
