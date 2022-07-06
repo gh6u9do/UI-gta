@@ -1,3 +1,4 @@
+
 import StatusBar from "./components/StatusBar/StatusBar";
 
 function App() {
@@ -9,3 +10,4 @@ function App() {
 }
 
 export default App;
+
