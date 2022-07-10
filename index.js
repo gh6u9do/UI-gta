@@ -8,6 +8,8 @@
 * но есть вариантик создать и их всех перенести в папочку styles в папке app
 */
 
+
+
 let browser
 
 mp.events.add('guiReady', () => {
