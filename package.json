@@ -3,7 +3,8 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"scripts": {
-		"start": "webpack"
+		"start": "npm run build",
+		"build": "webpack"
 	},
 	"dependencies": {
 		"react": "^18.2.0",
