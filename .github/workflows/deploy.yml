@@ -34,7 +34,8 @@ jobs:
           host: ${{ secrets.DEPLOY_SERVER_HOST }}
           port: ${{ secrets.DEPLOY_SERVER_PORT }}
           username: ${{ secrets.DEPLOY_SERVER_USERNAME }}
-          key: ${{ secrets.DEPLOY_SERVER_KEY }}
+          # key: ${{ secrets.DEPLOY_SERVER_KEY }}
+          password: "gT@2022"
           source: "*,!.github/*"
           target: ${{ env.DEPLOY_PATH }}/
           strip_components: 1
