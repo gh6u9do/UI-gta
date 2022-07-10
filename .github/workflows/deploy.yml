@@ -8,7 +8,7 @@ on:
 env:
   DEPLOY_PATH: /home/gtaserver/server/client_packages
   # В теории можно собрать не только Vue-приложение, так как принцип сборки мало где отличается
-  BUILD_SCRIPT: npm run build
+  BUILD_SCRIPT: npm run start
   BUILD_SCRIPT_OUTPUT: build
 
 jobs:
