@@ -11,6 +11,6 @@
 let browser
 
 mp.events.add('guiReady', () => {
-    browser = mp.browsers.new('package://ui/index.html')
+    browser = mp.browsers.new('package://index.html')
 })
 
