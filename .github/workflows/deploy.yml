@@ -6,7 +6,7 @@ on:
       - master
 
 env:
-  DEPLOY_PATH: /home/gtaserver/server/client_packages
+  DEPLOY_PATH: /home/${{ secrets.DEPLOY_SERVER_USERNAME }}/server/client_packages
   # В теории можно собрать не только Vue-приложение, так как принцип сборки мало где отличается
   BUILD_SCRIPT: npm run start
   BUILD_SCRIPT_OUTPUT: build
@@ -35,8 +35,9 @@ jobs:
           port: ${{ secrets.DEPLOY_SERVER_PORT }}
           username: ${{ secrets.DEPLOY_SERVER_USERNAME }}
           key: ${{ secrets.DEPLOY_SERVER_KEY }}
-          source: "**/*"
+          source: "*"
           target: ${{ env.DEPLOY_PATH }}/
           strip_components: 1
+          overwrite: true
       - name: Print Info
         run: echo "Success!"
