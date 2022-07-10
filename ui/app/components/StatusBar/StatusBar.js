@@ -1,5 +1,5 @@
 import Status from "../../layouts/Status/Status";
-import s from "./StatusBar.module.css";
+import s from "./../../../styles/StatusBar.module.css";
 
 export default function StatusBar() {
 	return (
