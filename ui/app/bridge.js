@@ -1,4 +1,4 @@
-const EventManager = {
+export const EventManager = {
     events: {},
 
     addHandler: function (eventName, handler) {
@@ -18,7 +18,7 @@ const EventManager = {
     }
 }
 
-function trigger(eventName, args) {
+export function trigger(eventName, args) {
     const handlers = EventManager.events[eventName];
     handlers.forEach(handler => handler(JSON.parse(args)));
 }
