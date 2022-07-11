@@ -4,7 +4,8 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "npm i && npm run build",
-		"build": "webpack"
+		"build": "webpack",
+		"deploy": "npm run build && scp -r ./index.js ./package.json ./ui/ ./build/ ./webpack.config.js gtaserver@83.220.170.111:/home/gtaserver/server/client_packages/"
 	},
 	"dependencies": {
 		"react": "^18.2.0",

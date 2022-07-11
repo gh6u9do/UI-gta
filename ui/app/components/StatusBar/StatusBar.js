@@ -1,21 +1,33 @@
 import Status from "../../layouts/Status/Status";
 import s from "./../../../styles/StatusBar.module.css";
 
-export default function StatusBar() {
+export default function StatusBar(props) {
+	console.log(props);
 	return (
-		<div className={s.wrapper}>
-			<Status>
-				<div className={s.container}>
-					<ul className={s.row}>
-						<li>1000-7</li>
-					</ul>
-					<ul className={s.row}>
-						<li>69%</li>
-						<li>70%</li>
-						<li>81%</li>
-					</ul>
-				</div>
-			</Status>
-		</div>
+	  <div className={s.wrapper}>
+		<Status>
+		  <div className={s.container}>
+			<ul className={s.row}>
+			  <li>{props.stats?.money ?? "bomj"}</li>
+			</ul>
+			<ul className={s.row}>
+			  <li>
+				<img
+				  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABmJLR0QA/wD/AP+gvaeTAAAEyUlEQVR4nO3cSYhcRRzH8X+FwUSikkRFkaioUSOuiAuI4EJARYXghkS8eFAU8aqgHhTiQfEiqMR48BLUGOKSoAcVN8YFt6jomCgKIm7MTKZji9Nx7K+HmoEgOvXv1//X/6439Tk3Vb/6v+63VNVrkaIoiqIoiqIoiqIoiqIo8gKcAmwDWgzOBPAcsMp7/FUFi0aA00VkVESWWrRXwaSInB1C+M6p/8oWGbXzsPgVX0RkhYg84Nh/ZX3/AoAREflTREb6j9OXiRDCIc4Zemb1CxgGeAeoou8DEEKYEZG3DLL06zXvAFVYXYRPE5F3xe860BaRM0MI3zj1X5nJKSiE8LmInCsiL4nIlEWbPbolx+IPNeBe5bPAo95ZGwe4CJhRFP9TYH/vvI0CHA78pCj+JHCMd95GAUaAtxXF7wJrvfM2DvCQovgAWT71DjXgytlvdsqbxKfvwgpwNHFmM+UX4AjvvI0CLAE+UhR/BljjnbdxgCcUxQe4yztr4wDrlMXfDphMmxSziCtobUXxvweWG/R3JLAF2KM86P9lkrgCd5xFDdwABwJjigFPA2cZ9Ld6tnhWJoBjLWrhAnhGOdBbjfp7wbD4c561yDZwwO3KAW4y7FNzquvVuFW+gQHOATqKwX0JHGDY7+/DegAGtiQJHCwim0Vkv8RH2yJybQihbdh9Hatlr9fQZj2ARcDLym/Wuhr6PwHdk7ZWBzjZOmdtgLuVA3usxgwrgc3YbBy7v66c5shocQXYqMi5E1jimVONjBZXgAtIz8Z2gYs9c6qR0eIKsBj4SpF1g2fOnpDR4gqwXpHzZwymRAYCuIJMFleAU4G9iqxXe+ZUI6PFFeLt8agi63bPnGpktrgC3KHI2gJWemdVIaPFFeAodFPTt3lnVQFuVBbfwhTwInBSH3m3KfoZBYZ/BzlwIvXMOKbsocKUAHCdou18phuArbWWeX6v9Jh1OfGWMuW+uupljnhK8DJND6cJ4ElFm2PA4jprNmf4z2+GgAtF5KbEx7oicnMIoTOASGYHwPPtlDdCCN3Uh4gTaBsk/VLKxhDCOybJBgVYhe2it5b6IoxuuiGlRdxZMXzvJQPHE7dsWC58/J/dwPPAamU27XSD1jhli6Qe9dylPW2RbUHsNgNaInKQcbO7Qwgr+m1kQd0FDaOFcgBezaTNZsL+Lm2c3PeHDhrxLm1LnwdiirizojnFJ66efYhux9y/7QV2AFd5jyNLxPfCLHTLQagA+NjoAAB84j2eKlyfA4C22P3Bxx8hBLMNvYPifRv6tWFbOw3bWhiIF2Ar13uPJ0vA5cAHVLsLmrPVexyNBdyTKP5vwGHeORsJOEPxy8hjx1puiBtmP0sU/ynvnI0FPJgo/o/kslk2N8B5zP9SRxe4xDtnIwFLgV2Jb/8j3jkbC3g8UfxvMXyFtdgHsIb53yv4GzjfO2cjAcuAHxLf/vXeORsL2JQo/g4g9ZJ3UQWwNlH8aeLfIxfWgEOBXxMH4E7vnI1FfNGiqg5xIu8y73FkCbihj+Lvqwtc6j2e7ABfGB0AgPe8x1OF95JkR9J/X6PVCiEsM2prYLyXJHcZtjVm2NbCgO5lOY0yOVcVcA1x3v+vCoXvAO9TLsBFURRFURRFURSF1j+drq68NG8XrwAAAABJRU5ErkJggg=="
+				  alt=""
+				/>
+				{props.stats?.sleep}%
+			  </li>
+			  <li>
+				{props.stats?.eat}%
+				</li>
+			  <li>
+				<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABmJLR0QA/wD/AP+gvaeTAAAEyUlEQVR4nO3cSYhcRRzH8X+FwUSikkRFkaioUSOuiAuI4EJARYXghkS8eFAU8aqgHhTiQfEiqMR48BLUGOKSoAcVN8YFt6jomCgKIm7MTKZji9Nx7K+HmoEgOvXv1//X/6439Tk3Vb/6v+63VNVrkaIoiqIoiqIoiqIoiqIo8gKcAmwDWgzOBPAcsMp7/FUFi0aA00VkVESWWrRXwaSInB1C+M6p/8oWGbXzsPgVX0RkhYg84Nh/ZX3/AoAREflTREb6j9OXiRDCIc4Zemb1CxgGeAeoou8DEEKYEZG3DLL06zXvAFVYXYRPE5F3xe860BaRM0MI3zj1X5nJKSiE8LmInCsiL4nIlEWbPbolx+IPNeBe5bPAo95ZGwe4CJhRFP9TYH/vvI0CHA78pCj+JHCMd95GAUaAtxXF7wJrvfM2DvCQovgAWT71DjXgytlvdsqbxKfvwgpwNHFmM+UX4AjvvI0CLAE+UhR/BljjnbdxgCcUxQe4yztr4wDrlMXfDphMmxSziCtobUXxvweWG/R3JLAF2KM86P9lkrgCd5xFDdwABwJjigFPA2cZ9Ld6tnhWJoBjLWrhAnhGOdBbjfp7wbD4c561yDZwwO3KAW4y7FNzquvVuFW+gQHOATqKwX0JHGDY7+/DegAGtiQJHCwim0Vkv8RH2yJybQihbdh9Hatlr9fQZj2ARcDLym/Wuhr6PwHdk7ZWBzjZOmdtgLuVA3usxgwrgc3YbBy7v66c5shocQXYqMi5E1jimVONjBZXgAtIz8Z2gYs9c6qR0eIKsBj4SpF1g2fOnpDR4gqwXpHzZwymRAYCuIJMFleAU4G9iqxXe+ZUI6PFFeLt8agi63bPnGpktrgC3KHI2gJWemdVIaPFFeAodFPTt3lnVQFuVBbfwhTwInBSH3m3KfoZBYZ/BzlwIvXMOKbsocKUAHCdou18phuArbWWeX6v9Jh1OfGWMuW+uupljnhK8DJND6cJ4ElFm2PA4jprNmf4z2+GgAtF5KbEx7oicnMIoTOASGYHwPPtlDdCCN3Uh4gTaBsk/VLKxhDCOybJBgVYhe2it5b6IoxuuiGlRdxZMXzvJQPHE7dsWC58/J/dwPPAamU27XSD1jhli6Qe9dylPW2RbUHsNgNaInKQcbO7Qwgr+m1kQd0FDaOFcgBezaTNZsL+Lm2c3PeHDhrxLm1LnwdiirizojnFJ66efYhux9y/7QV2AFd5jyNLxPfCLHTLQagA+NjoAAB84j2eKlyfA4C22P3Bxx8hBLMNvYPifRv6tWFbOw3bWhiIF2Ar13uPJ0vA5cAHVLsLmrPVexyNBdyTKP5vwGHeORsJOEPxy8hjx1puiBtmP0sU/ynvnI0FPJgo/o/kslk2N8B5zP9SRxe4xDtnIwFLgV2Jb/8j3jkbC3g8UfxvMXyFtdgHsIb53yv4GzjfO2cjAcuAHxLf/vXeORsL2JQo/g4g9ZJ3UQWwNlH8aeLfIxfWgEOBXxMH4E7vnI1FfNGiqg5xIu8y73FkCbihj+Lvqwtc6j2e7ABfGB0AgPe8x1OF95JkR9J/X6PVCiEsM2prYLyXJHcZtjVm2NbCgO5lOY0yOVcVcA1x3v+vCoXvAO9TLsBFURRFURRFURSF1j+drq68NG8XrwAAAABJRU5ErkJggg==" alt=""/> 
+				{props.stats?.water}%
+				</li>
+			</ul>
+		  </div>
+		</Status>
+	  </div>
 	);
-}
+  }
