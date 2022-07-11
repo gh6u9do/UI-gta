@@ -1,4 +1,4 @@
-import Status from "../../layouts/Status/Status";
+import Status from "../../layouts/Status";
 import s from "./../../../styles/StatusBar.module.css";
 
 export default function StatusBar(props) {

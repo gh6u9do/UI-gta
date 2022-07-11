@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom'
 import React from 'react'
 
 import StatusBar from "./components/StatusBar/StatusBar"
-import Avtorization from './layouts/avtorization/avtorization'
+import Authorization from './components/Authorization/Authorization'
 import {EventManager} from './bridge'
 
 function App() {
@@ -21,7 +21,7 @@ function App() {
     }
     return <div className='App'>
         {showStatusBar && <StatusBar />}
-        <Avtorization />
+        <Authorization />
     </div>
 }
 
