@@ -1,1 +1,0 @@
-mp.events.add("guiReady",(function(){mp.browsers.new("package://ui/index.html")}));
