@@ -1,8 +1,8 @@
 import s from "./../../../styles/Avtorization.module.css";
 
 
-export default function Avtorization() {
+export default function Avtorization(props) {
     return <div className="wrapper">
-        <div className="avtorization-window"></div>
+        <div className="authorization_window">{props.children}</div>
     </div>
 }

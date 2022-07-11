@@ -1,5 +1,17 @@
 .wrapper{
+    display: flex;
     height: 100vh;
     width: 100vw;
     border: 1px solid red;
+    align-items: center;
+    justify-content: center;
+    filter: blur(6px);
+}
+
+.authorization_window{
+    width: 680px;
+    height: 440px;
+    background: #333;
+    box-shadow: 0 0 40px 8px #000;
+    border-radius: 20px;
 }
